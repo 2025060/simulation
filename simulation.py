@@ -6,12 +6,11 @@ import platform
 
 if platform.system() == 'Windows':
     matplotlib.rc('font', family='Malgun Gothic')
-elif platform.system() == 'Darwin':  # macOS
+elif platform.system() == 'Darwin':
     matplotlib.rc('font', family='AppleGothic')
-else:  # Linux (예: Ubuntu 서버)
-    matplotlib.rc('font', family='NanumGothic')
+else:
+    matplotlib.rc('font', family='NanumGothic')  # Linux 서버용
 
-# 마이너스 기호 깨짐 방지
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 # 회귀 계수 정의
